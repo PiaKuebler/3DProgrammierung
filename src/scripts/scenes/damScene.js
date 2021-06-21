@@ -18,12 +18,12 @@ constructor(){
 preload() {
     this.load.image('background', 'assets/images/background.png');
     this.load.image('stones', 'assets/images/stones.png');
-    this.load.image('hole2', 'assets/Damm/Loch_2.svg');
-    this.load.image('hole1', 'assets/Damm/Loch_1.svg');
-    this.load.image('hole3', 'assets/Damm/Loch_3.svg');
-    this.load.spritesheet('waterfall', 'assets//images/Wasserfall_1.png',{ frameWidth: 345, frameHeight: 1729, endFrame: 60 });
+    this.load.image('hole2', 'assets/images/hole_1.svg');
+    this.load.image('hole1', 'assets/images/hole_2.svg');
+    this.load.image('hole3', 'assets/images/hole_3.svg');
+    this.load.spritesheet('waterfall', 'assets//images/waterfall.png',{ frameWidth: 345, frameHeight: 1729, endFrame: 60 });
     this.load.image('water', 'assets/images/water.png')
-    this.load.spritesheet('watersplash', 'assets/images/Schaum.png',{ frameWidth: 438, frameHeight: 207, endFrame: 19 });
+    this.load.spritesheet('watersplash', 'assets/images/splash.png',{ frameWidth: 438, frameHeight: 207, endFrame: 19 });
 
     this.load.audio('waterSound', ['assets/sounds/water.mp3']);
 }
