@@ -18,9 +18,9 @@ constructor(){
 preload() {
     this.load.image('background', 'assets/images/background.png');
     this.load.image('stones', 'assets/images/stones.png');
-    this.load.image('hole2', 'assets/images/hole_1.svg');
-    this.load.image('hole1', 'assets/images/hole_2.svg');
-    this.load.image('hole3', 'assets/images/hole_3.svg');
+    this.load.image('hole2', 'assets/images/hole_1.png');
+    this.load.image('hole1', 'assets/images/hole_2.png');
+    this.load.image('hole3', 'assets/images/hole_3.png');
     this.load.spritesheet('waterfall', 'assets//images/waterfall.png',{ frameWidth: 345, frameHeight: 1729, endFrame: 60 });
     this.load.image('water', 'assets/images/water.png')
     this.load.spritesheet('watersplash', 'assets/images/splash.png',{ frameWidth: 438, frameHeight: 207, endFrame: 19 });
@@ -101,7 +101,7 @@ create() {
             for (var i = 0; i < 5; i++) {
                 console.log('an Stelle ', i, ': ', self.holes[i]);
                 if (self.holes[i] == null) {
-                    self.holes[i] = this.add.existing(new Hole(this,xx,yy,config.scale.scaleY)).setScale(0.6);
+                    self.holes[i] = this.add.existing(new Hole(this,xx,yy,config.scale.scaleY)).setScale(0.2);
                     //self.holes[i] = this.add.sprite(xx, yy, 'hole1').setInteractive().setScale(config.scale.scaleY);
                     // self.waterfall[i] = this.add.sprite(xx, yy, 'water1').setScale(config.scale.scaleY).setOrigin(0.5,0.05);    // setOrigin setzt den Wasserfall an das Loch hoch Muss auf 0 wenn die Sprites angespasst sin dund kaum Whitespace haben
                     // this.add.image(xx, yy, 'water1');
