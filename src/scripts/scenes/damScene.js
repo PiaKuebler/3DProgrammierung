@@ -18,14 +18,15 @@ constructor(){
 preload() {
     this.load.image('background', 'assets/images/background.png');
     this.load.image('stones', 'assets/images/stones.png');
-    this.load.image('hole2', 'assets/images/hole_1.png');
-    this.load.image('hole1', 'assets/images/hole_2.png');
+    this.load.image('hole1', 'assets/images/hole_1.png');
+    this.load.image('hole2', 'assets/images/hole_2.png');
     this.load.image('hole3', 'assets/images/hole_3.png');
     this.load.spritesheet('waterfall', 'assets//images/waterfall.png',{ frameWidth: 345, frameHeight: 1729, endFrame: 60 });
     this.load.image('water', 'assets/images/water.png')
     this.load.spritesheet('watersplash', 'assets/images/splash.png',{ frameWidth: 438, frameHeight: 207, endFrame: 19 });
 
     this.load.audio('waterSound', ['assets/sounds/water.mp3']);
+    this.load.audio('ambientSound', ['assets/sounds/ambient.mp3']);
 }
 
 //**********************************CREATE**************************************************
@@ -35,6 +36,8 @@ create() {
     var background = this.add.image(config.scale.width/2, config.scale.height/2, 'background').setScale(config.scale.scaleY);
     var water = this.add.image(config.scale.width/2, config.scale.height/2, 'water').setScale(config.scale.scaleY).setDepth(2);
     var stones = this.add.image(config.scale.width/2, config.scale.height/2, 'stones').setScale(config.scale.scaleY).setDepth(10);
+
+    var ambientSound =  this.sound.add('ambientSound').play({loop:true});
 
     this.anims.create({
         key: 'runningWater',

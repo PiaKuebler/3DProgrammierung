@@ -30,11 +30,12 @@ export default class Hole extends Phaser.Physics.Arcade.Sprite {
         this.watersplash = scene.add.sprite(x, 0.94*config.scale.height, 'watersplash').setScale(config.scale.scaleY).setOrigin(0.5,1).setDepth(3);    // setOrigin setzt den Wasserfall an das Loch hoch Muss auf 0 wenn die Sprites angespasst sin dund kaum Whitespace haben
         this.watersplash.play('splashingWater');
 
-      //  this.waterSound = this.sound.add('waterSound', {loop:true});
+        this.waterSound = this.scene.sound.add('waterSound').play({loop:true, volume: 0.5});
     }
     showWaterfall(hide){
         this.waterfall.setVisible(hide);
         this.watersplash.setVisible(hide);
+        this.waterSound.stop;
     }
 
 }
